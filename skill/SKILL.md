@@ -1,15 +1,15 @@
 ---
 name: reformular-linkedin-por-curriculo
-description: Use quando alguém quiser reformular o perfil do LinkedIn a partir do currículo e da área de atuação, com otimização para recrutadores e ATS, sem inflar qualificações.
+description: Use quando alguém quiser reformular o LinkedIn e o GitHub a partir do currículo e da área de atuação, com otimização para recrutadores e ATS, sem inflar qualificações.
 ---
 
-# Reformulação de LinkedIn a partir do currículo
+# Reformulação de LinkedIn (e GitHub) a partir do currículo
 
-Objetivo: deixar o perfil do LinkedIn da pessoa alinhado ao currículo, às vagas reais da área e ao nível de senioridade dela. Ele deve ser encontrado nas buscas de recrutadores e convencer quem lê. **Nunca invente ou exagere qualificações.**
+Objetivo: deixar o perfil do LinkedIn da pessoa, e o GitHub quando ela é da área de tecnologia, alinhados ao currículo, às vagas reais da área e ao nível de senioridade dela. Ele deve ser encontrado nas buscas de recrutadores e convencer quem lê. **Nunca invente ou exagere qualificações.**
 
 ## Escopo
 
-**Faz:** análise do currículo, leitura de vagas da área, avaliação de senioridade, currículo otimizado para ATS, textos novos para o LinkedIn (título, Sobre, experiências, formação, competências, destaque), banner de capa e nota do perfil com plano de melhoria.
+**Faz:** análise do currículo, leitura de vagas da área, avaliação de senioridade, currículo otimizado para ATS, textos novos para o LinkedIn (título, Sobre, experiências, formação, competências, destaque), banner de capa, sugestões para o GitHub (bio, README de perfil, repositórios fixados, descrições e topics) e nota do perfil com plano de melhoria.
 
 **Não faz:** automação do LinkedIn (preencher formulários, raspar dados, candidaturas em massa), login, publicações ou mensagens em nome da pessoa, nem exclusão de conteúdo. **A pessoa revisa e aplica as mudanças no perfil por conta própria.**
 
@@ -17,9 +17,10 @@ Objetivo: deixar o perfil do LinkedIn da pessoa alinhado ao currículo, às vaga
 
 1. **Só vale o que a pessoa confirmou.** O currículo e as respostas dela são a base de verdade. Não acrescente ferramenta, tempo de experiência, número ou resultado que ela não confirmou. Se faltar um dado, pergunte.
 2. **Nenhum número inventado.** Sem o valor real, escreva o resultado sem número (ex.: "reduzindo custos").
-3. **Mantenha tudo coerente.** Cargo, datas e instituições têm de bater entre currículo e LinkedIn. Quando houver divergência, pergunte qual está certo.
+3. **Mantenha tudo coerente.** Cargo, datas e instituições têm de bater entre currículo, LinkedIn e GitHub. Quando houver divergência, pergunte qual está certo.
 4. **Avise quando um texto soar maior do que a experiência.** Ex.: o resumo diz "engenharia de dados", mas a experiência é "apoio ao time de dados". Aponte e alinhe.
-5. **Discrição é o padrão.** Parta do princípio de que a pessoa pode estar empregada e não quer que saibam da busca.
+5. **Tecnologia encontrada no código não entra sozinha.** Se um repositório mostrar uma ferramenta que não está no currículo (ex.: Docker, Jest, PostgreSQL no `package.json`), pergunte se foi a pessoa que fez e se ela se sente confortável para explicar numa entrevista. Só entra o que ela confirmar, com o nível que ela indicar (ex.: "Docker (básico)").
+6. **Discrição é o padrão.** Parta do princípio de que a pessoa pode estar empregada e não quer que saibam da busca.
 
 ## Fluxo
 
@@ -63,7 +64,21 @@ Entregue prontos para copiar e colar:
 - 1584×396 px. Deixe o terço esquerdo livre, porque a foto cobre essa área.
 - Use `templates/banner.html`: troque os textos e as cores, abra no navegador e tire a captura, ou renderize com Playwright.
 
-### 8. Nota e próximos passos
+### 8. GitHub (para quem é de tecnologia)
+Peça o link do GitHub e leia antes de sugerir qualquer coisa. Use `templates/checklist-github.md`.
+- **Levantamento:** repositórios, descrições, linguagens, datas e o README e o `package.json` dos principais, para descobrir a stack real. O que for novo passa pela regra 5.
+- **Perfil:** nome completo, bio igual ao título do LinkedIn (até 160 caracteres), empresa e localização corretas, links do portfólio e do LinkedIn.
+- **README de perfil:** só aparece no perfil se estiver num repositório público com o **nome exato do usuário**. Se estiver num repositório com outro nome, avise a pessoa para renomear. No conteúdo:
+  - Sobre mim curto e coerente com o LinkedIn.
+  - **Projetos principais em destaque**, com link do projeto no ar, funcionalidades e badges da stack. Projetos reais, com cliente ou em produção, vêm primeiro.
+  - Tabela com os outros projetos e ícones da stack (só tecnologias confirmadas).
+  - Tire promessas que a pessoa não confirma (ex.: CI/CD, microsserviços).
+  - Se a pessoa quer discrição, não cite o nome do empregador atual.
+- **Fixados:** até 6 repositórios, priorizando projetos reais, trabalhos com IA e código com testes. Repositório privado não aparece para visitantes; nesse caso, destaque o projeto no README com o link do site.
+- **Cada repositório fixado:** descrição de uma frase (o que é + stack), site quando houver e 4 a 6 topics.
+- Repositórios de estudo antigos não precisam sumir; só não devem ficar em destaque.
+
+### 9. Nota e próximos passos
 - Nota do perfil antes e depois (0 a 10) e nota comparada com as vagas do nível. Deixe claro que é a sua avaliação, não do LinkedIn.
 - Liste o que ainda falta e sugira comparar as "aparições em pesquisa" do painel depois de 1 a 2 semanas.
 
@@ -71,6 +86,7 @@ Entregue prontos para copiar e colar:
 - Ao editar cada experiência ou formação, desligar **"Compartilhar com sua rede" / "Notificar a rede"** antes de salvar.
 - Open to Work: só com a opção **"Somente recrutadores"**, ou desligado.
 - Tirar #OpenToWork de posts públicos e do Em destaque.
+- Se a pessoa for divulgar o trabalho (ex.: um projeto open source), o post fala da ferramenta, não da busca por emprego, e sem #OpenToWork.
 - Avisar que **excluir uma competência apaga os endossos dela**. Remova só o que é de outra área, repetido ou nome de aula.
 
 ## Como responder
