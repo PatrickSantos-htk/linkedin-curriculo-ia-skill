@@ -1,6 +1,6 @@
-# Reformular LinkedIn por Currículo — Skill para Claude
+# Reformular LinkedIn (e GitHub) por Currículo — Skill para Claude
 
-Uma **skill** para o [Claude](https://claude.ai) que transforma o seu currículo num perfil de LinkedIn mais fácil de encontrar por recrutadores e sistemas ATS, **sem inventar ou exagerar nenhuma qualificação**.
+Uma **skill** para o [Claude](https://claude.ai) que transforma o seu currículo num perfil de LinkedIn (e num GitHub, se você é de tecnologia) mais fácil de encontrar por recrutadores e sistemas ATS, **sem inventar ou exagerar nenhuma qualificação**.
 
 Serve para qualquer área: desenvolvimento, dados, design, vendas, RH, marketing...
 
@@ -12,12 +12,13 @@ Serve para qualquer área: desenvolvimento, dados, design, vendas, RH, marketing
 4. **Gera um currículo otimizado para ATS.**
 5. **Audita o seu LinkedIn** e entrega os textos novos prontos para copiar: título, Sobre, experiências, competências e destaque.
 6. **Monta um banner de capa** (1584×396) com a sua identidade.
-7. **Dá uma nota** para o perfil antes e depois, com os próximos passos.
+7. **Revisa o seu GitHub:** bio, README de perfil, projetos em destaque, fixados, descrições e topics.
+8. **Dá uma nota** para o perfil antes e depois, com os próximos passos.
 
 ## Princípios
 
 - 🧾 **Só entra o que você confirmar.** Nada de tecnologia que você não usa, tempo inflado ou número inventado.
-- 🔗 **Currículo e LinkedIn coerentes:** mesmo cargo, mesmas datas, mesmas instituições.
+- 🔗 **Currículo, LinkedIn e GitHub coerentes:** mesmo cargo, mesmas datas, mesmas instituições.
 - 🤫 **Discrição por padrão:** para quem está empregado e não quer que a busca fique visível. Nada de #OpenToWork público, e "Compartilhar com a rede" sempre desligado ao editar.
 - 🙋 **Você no controle:** a skill **não automatiza o LinkedIn**. Você revisa e aplica cada mudança.
 
@@ -38,10 +39,12 @@ e anexar o currículo.
 | Arquivo | Para que serve |
 |---|---|
 | [`skill/SKILL.md`](skill/SKILL.md) | A skill em si |
-| [`templates/checklist-linkedin.md`](templates/checklist-linkedin.md) | Checklist para auditar o perfil |
+| [`templates/checklist-linkedin.md`](templates/checklist-linkedin.md) | Checklist para auditar o LinkedIn |
+| [`templates/checklist-github.md`](templates/checklist-github.md) | Checklist para auditar o GitHub |
 | [`templates/modelo-curriculo-ats.md`](templates/modelo-curriculo-ats.md) | Estrutura de currículo que o ATS lê bem |
 | [`templates/banner.html`](templates/banner.html) | Gerador de banner editável |
 | [`exemplos/exemplo-ficticio.md`](exemplos/exemplo-ficticio.md) | Exemplo de antes e depois |
+| [`CHANGELOG.md`](CHANGELOG.md) | Histórico de versões |
 
 ## Aviso
 
