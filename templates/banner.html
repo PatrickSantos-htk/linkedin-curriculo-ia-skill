@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+  Gerador de banner para LinkedIn (1584x396).
+  1. Troque os textos marcados com EDITE.
+  2. Ajuste as cores em :root.
+  3. Abra no navegador com zoom 100% e tire a captura da área do banner,
+     ou renderize com Playwright:  page.set_viewport_size({"width":1584,"height":396}); page.screenshot(path="banner.png")
+  O terço esquerdo fica mais vazio de propósito: a foto do perfil cobre essa área.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Banner LinkedIn</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg1:#0A0F1C; --bg2:#121A33;       /* fundo */
+  --a1:#38BDF8;  --a2:#A78BFA;        /* cores de destaque */
+  --txt:#E6EDF7; --muted:#94A3B8;
+}
+*{margin:0;box-sizing:border-box}
+body{width:1584px;height:396px;overflow:hidden;background:var(--bg1);font-family:Inter,sans-serif;color:var(--txt);position:relative}
+.bg{position:absolute;inset:0;background:
+  radial-gradient(600px 300px at 1150px 60px,color-mix(in srgb,var(--a1) 18%,transparent),transparent 70%),
+  radial-gradient(500px 280px at 1500px 380px,color-mix(in srgb,var(--a2) 20%,transparent),transparent 70%),
+  linear-gradient(120deg,var(--bg1) 0%,var(--bg2) 100%)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(148,163,184,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.06) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(90deg,transparent 0%,#000 45%)}
+.main{position:absolute;left:560px;right:60px;top:52px}
+.kicker{font-family:"JetBrains Mono",monospace;font-size:19px;color:var(--muted)}
+.kicker b{color:var(--a1);font-weight:400}
+h1{font-size:64px;font-weight:800;letter-spacing:-1.5px;margin-top:14px;line-height:1.05}
+h1 span{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:24px;color:#CBD5E1;margin-top:10px}
+.chips{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.chip{font-family:"JetBrains Mono",monospace;font-size:16px;padding:7px 14px;border-radius:8px;border:1px solid color-mix(in srgb,var(--a1) 40%,transparent);background:color-mix(in srgb,var(--a1) 8%,transparent);color:var(--txt)}
+.foot{position:absolute;right:60px;bottom:30px;font-family:"JetBrains Mono",monospace;font-size:16px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="bg"></div><div class="grid"></div>
+<div class="main">
+  <div class="kicker"><b>&gt;</b> Rio de Janeiro · Remoto</div>            <!-- EDITE -->
+  <h1>Analista de Dados <span>&amp; BI</span></h1>                          <!-- EDITE: cargo -->
+  <div class="sub">Transformo dados em decisões — do SQL ao dashboard</div> <!-- EDITE: frase -->
+  <div class="chips">                                                       <!-- EDITE: 5 a 7 competências -->
+    <div class="chip">SQL</div><div class="chip">Python</div><div class="chip">Power BI</div>
+    <div class="chip">ETL</div><div class="chip">Excel</div><div class="chip">Estatística</div>
+  </div>
+</div>
+<div class="foot">seusite.com · linkedin.com/in/seu-nome</div>          <!-- EDITE -->
+</body>
+</html>
